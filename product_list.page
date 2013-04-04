@@ -1,0 +1,100 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="TEMPLATE_NAME no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="TEMPLATE_NAME no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="TEMPLATE_NAME no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="TEMPLATE_NAME no-js" lang="en"> <!--<![endif]-->
+<head>
+	<!--
+		retail_templates
+		product_list.page
+	-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title><%= title %></title>
+	<meta name="keywords" content="<%=  keywords  %>">
+	<meta name="description" content="<%=  description  %>">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="/templates/retail_templates/css/style.css">
+	<% if @mode == 'edit' %>
+		<link rel="stylesheet" href="/templates/retail_templates/css/blocks.css">
+	<% end %>
+
+	<script src="/templates/retail_templates/js/libs/modernizr-2.6.1.custom.min.js"></script>
+
+	<%= render :region => 'custom_colors' %>
+</head>
+<body>
+	<% if @mode == 'edit' %>
+		<div class="blocks_edit_mode_info">
+			Please select if this page should appear in the main navigation menu:
+		</div>
+	<% end %>
+	<div class="main_menu_status"><%= render :set => "main_menu_status", :values => [ [ 'Include in main menu', 'include' ], [ 'Exclude from main menu', 'exclude' ] ] %></div>
+	
+
+	<div id="product-list">
+		<div class="main" role="main">
+			
+
+
+			<div class="product clearfix">
+       			<div class="product-img">
+		          <% render :link => 'link_wrap1', :text_editable => false, :link_value => "#" do %>
+		          	<%= render :image => 'image_region1', :default => "/templates/retail_templates/img/placeholder/341x326.png", :width => "341", :height => "326", :html => { :style => "font-size:1.2em;", :class => "photo" } %>
+		          <% end -%>
+				</div>
+				<div class="product-description">
+					<h2><%= render :textual => 'product_heading1', :default => 'This is your product heading and it could be a few lines in length', :maxlength => '80' %></h2>
+					<%= render :textual => 'product_details1', :type => :multi, :default => "<p>This is your product description, consectetur adipiscing elit. Aliquam accumsan tincidunt suscipit hendrerit turpis.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan tincidunt suscipit. Vivamus hendrerit turpis ligula.</p>" %>
+					<div class="more-info">
+						<%= render :link => "btn_link_1", :text_editable => true, :link_value => "#", :text => "Read More", :link_attributes => { :class => "btn" } %>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="product clearfix">
+				<div class="product-img">
+		          <% render :link => 'link_wrap2', :text_editable => false, :link_value => "#" do %>
+		          	<%= render :image => 'image_region2', :default => "/templates/retail_templates/img/placeholder/341x326.png", :width => "341", :height => "326", :html => { :style => "font-size:1.2em;", :class => "photo" } %>
+		          <% end %>
+				</div>
+				<div class="product-description">
+					<h2><%= render :textual => 'product_heading2', :default => 'This is your product heading and it could be a few lines in length', :maxlength => '80' %></h2>
+					<%= render :textual => 'product_details2', :type => :multi, :default => "<p>This is your product description, consectetur adipiscing elit. Aliquam accumsan tincidunt suscipit hendrerit turpis.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan tincidunt suscipit. Vivamus hendrerit turpis ligula.</p>" %>
+					<div class="more-info">
+						<%= render :link => "btn_link_2", :text_editable => true, :link_value => "#", :text => "Read More", :link_attributes => { :class => "btn" } %>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="product clearfix">
+		        <div class="product-img">
+		          <% render :link => 'link_wrap3', :text_editable => false, :link_value => "#" do %>
+		          	<%= render :image => 'image_region3', :default => "/templates/retail_templates/img/placeholder/341x326.png", :width => "341", :height => "326", :html => { :style => "font-size:1.2em;", :class => "photo" } %>
+		          <% end %>
+				</div>
+				<div class="product-description">
+					<h2><%= render :textual => 'product_heading3', :default => 'This is your product heading and it could be a few lines in length', :maxlength => '80' %></h2>
+					<%= render :textual => 'product_details3', :type => :multi, :default => "<p>This is your product description, consectetur adipiscing elit. Aliquam accumsan tincidunt suscipit hendrerit turpis.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan tincidunt suscipit. Vivamus hendrerit turpis ligula.</p>" %>
+					<div class="more-info">
+						<%= render :link => "btn_link_3", :text_editable => true, :link_value => "#", :text => "Read More", :link_attributes => { :class => "btn" } %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!--! end of #container -->
+
+	<%= render :region => 'menu' %>
+
+	<script src="/templates/retail_templates/js/libs/jquery-1.8.1.min.js"></script>
+	<script src="/templates/retail_templates/js/plugins.js"></script>
+	<script src="/templates/retail_templates/js/script.js"></script>
+</body>
+</html>

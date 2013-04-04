@@ -1,0 +1,234 @@
+
+/*
+	BLOCKS HELPER CSS
+*/
+
+.media-region-wrapper {
+	position: relative;
+}
+
+/* stretches text regions to full width */
+body.edit div#blocks-wrapper div#inner-blocks-wrapper textarea {
+	width: 100%;
+}
+
+
+/*
+	these rules will show max/min image dimensions on image regions using the existing
+*/
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element {
+	position: absolute;
+	top: 0;
+	left: 136px;
+	background: white;
+	font-size: 11px;
+	line-height: 1em;
+	padding: 5px 5px 6px 5px;
+	margin: 1px;
+	display: block;
+}
+.ie7 body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element { display: none; }
+
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .width,
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .height,
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .asset-id { 	display: none; }
+
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-width { }
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-width:before { content: 'Min.: '; }
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-width:after { content: ' x'; }
+
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-height { }
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .min-height:after { content: 'px'; }
+
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-width { }
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-width:before { content: '| Max.: '; }
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-width:after { content: ' x'; }
+
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-height { }
+body.blocks div#blocks-wrapper div#inner-blocks-wrapper .image-region-wrapper div.blocks-element .max-height:after { content: 'px'; }
+
+
+/* shows page url bottom right in edit mode */
+#page_url_helper {
+	text-align: center;
+	position: fixed;
+	background: #333;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+	color: white;
+	font-size: 10px;
+	padding: 3px 10px;
+	border-radius: 3px 0 0 0;
+	-webkit-box-shadow: 0 0 5px 0 #999;
+	   -moz-box-shadow: 0 0 5px 0 #999;
+	        box-shadow: 0 0 5px 0 #999;
+}
+#page_url_helper a {
+	color: white;
+}
+
+
+
+
+
+.blocks_edit_mode_info {
+	display: none;
+}
+
+.edit .blocks_edit_mode_info {
+	display: block;
+	padding: 5px 15px;
+	margin: 15px 0;
+	color: white;
+	background-color: #6699cc;
+	border-radius: 4px;
+	border: 2px solid #006699;
+}
+
+.edit #ticketing .product-description,
+#dual-image-product .product-description {
+	float: none;
+	overflow: visible;
+	width: 394px;
+	height: auto;
+	padding: 0;
+	margin: 0 0 0 320px;
+}
+
+.edit #ticketing .more-info,
+#dual-image-product .more-info {
+	position: static;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.edit #ticketing .main,
+#dual-image-product .main {
+	height: auto;
+	padding: 20px 0;
+}
+
+.edit #lightbox {
+	display: block;
+	background-color: black;
+	padding: 25px 0;
+}
+
+
+.edit #lightbox .backdrop {
+	display: none;
+}
+
+
+.edit #lightbox #product {
+	position: static;
+	top: 0;
+	height: auto;
+	margin: 0 auto;
+	border: 2px solid #ccc;
+}
+
+.edit #product header,
+.edit #ticketing header,
+#dual-image-product .product-img,
+#product-list .main .product:first-child .product-img,
+#product-list .main .product:first-child .product-description,
+#product-list .product-description {
+	height: auto;
+}
+
+
+.edit #ticketing .price {
+	text-align: left;
+}
+
+.edit #ticketing .price .text-region-wrapper {
+	display:inline-block;
+}
+
+.edit #ticketing .price .text-region-wrapper input {
+	font-size:14px;
+}
+
+.edit #ticketing .conditions {
+	text-align: left;
+}
+
+.edit #ticketing .conditions .text-region-wrapper {
+	display:inline-block;
+}
+
+.edit #ticketing .conditions .text-region-wrapper input.editable_region {
+	width: 152px;
+}
+
+.edit #ticketing .product-description h2 .text-region-wrapper input.editable_region {
+	width: 200px;
+}
+
+.edit #ticketing .product-description table[role=presentation] {
+	width:300px ! important;
+}
+
+#dual-image-product .product-heading h2 {
+	font-size: 16px;
+}
+
+#product-list .product-description h2,
+#product .product-description h2 {
+	font-size: 14px;
+}
+
+.close-lightbox {
+	display: none;
+}
+
+.product-description .more-info {
+	position: static;
+}
+
+#mainnav {
+	display: none;
+}
+
+body.edit .main_menu_status
+{
+	display: block;
+}
+
+
+
+
+#full_bleed_gallery {
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	overflow: visible;
+}
+
+#full_bleed_gallery .item {
+	position: static;
+}
+
+#full_bleed_gallery .off-left {
+	-webkit-transform: translateX(0px) translateZ(0);
+}
+
+#swipe_gallery {
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+}
+
+#swipe_gallery .item {
+	width: auto;
+	height: auto;
+	float: none;
+}
+
+#swipe_gallery .item .image-region-wrapper > img {
+	width: auto;
+	height: 300px;
+}
